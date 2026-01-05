@@ -1,0 +1,116 @@
+header {
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-expanded-width);
+  width: calc(100% - var(--sidebar-expanded-width));
+  background-color: var(--surfaces);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  z-index: 900;
+  transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header.collapsed {
+  left: var(--sidebar-collapsed-width);
+  width: calc(100% - var(--sidebar-collapsed-width));
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/**** Branding styles ****/
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* border: 2px solid blue; */
+}
+
+/* .brand-logo-small {
+  font-family: "Courier New", monospace;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  border: 2px solid var(--tertiary-color);
+  border-radius: 6px;
+  padding: 4px 8px;
+  width: 52px;
+  height: 52px;
+}
+
+.brand-logo-small .bracket {
+  color: var(--secondary-color);
+}
+.brand-logo-small .slash {
+  color: var(--primary-text);
+} */
+
+.app-name-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  letter-spacing: 0.5px;
+  font-family: inherit;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: var(--secondary-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  transition: color 0.2s;
+}
+.sidebar-toggle:hover {
+  color: var(--secondary-color);
+}
+.sidebar-toggle.mobile {
+  display: none;
+}
+.header-right {
+  margin-left: auto;
+}
+
+/******** Responsive Designs ********/
+
+@media (max-width: 1024px) {
+  header,
+  header.collapsed {
+    left: 0 !important;
+    width: 100% !important;
+  }
+
+  /**** Hide the Desktop Toggle, Show the Mobile Toggle ****/
+  .sidebar-toggle.desktop {
+    display: none;
+  }
+  .sidebar-toggle.mobile {
+    display: block;
+  }
+
+  header {
+    padding: 0 1rem;
+  }
+
+  /**** Hide the app-name ****/
+  .app-name-header {
+    display: none;
+  }
+
+  /* *** Hide the logo ***
+  .brand-logo-small {
+    display: none;
+  } */
+
+  .header-left {
+    gap: 0;
+  }
+}

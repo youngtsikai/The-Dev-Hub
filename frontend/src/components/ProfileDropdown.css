@@ -1,0 +1,121 @@
+.profile-dropdown {
+  position: relative;
+}
+
+.profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.profile-trigger:hover {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+}
+
+.profile-user-name {
+  color: var(--primary-text);
+  font-weight: 500;
+}
+
+.profile-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--secondary-color);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 300px;
+  background-color: var(--surfaces);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 1100;
+  padding: 15px;
+  color: var(--secondary-text);
+}
+
+.dropdown-profile-info {
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
+}
+
+.dropdown-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.dropdown-name {
+  font-size: 1.1rem;
+  color: var(--primary-text);
+  margin-bottom: 5px;
+}
+
+.dropdown-level {
+  font-size: 0.9rem;
+  color: var(--tertiary-color);
+}
+
+.dropdown-menu .xp-progress {
+  margin-bottom: 15px;
+}
+
+.dropdown-menu .xp-progress p {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.dropdown-menu .progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown-menu .progress-bar {
+  height: 100%;
+  background-color: var(--success);
+  border-radius: 4px;
+}
+
+.dropdown-links {
+  list-style: none;
+}
+
+.dropdown-links hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+}
+
+.dropdown-links li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--secondary-text);
+  font-size: 0.95rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--primary-text);
+}
