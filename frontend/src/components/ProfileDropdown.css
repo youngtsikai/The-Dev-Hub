@@ -101,6 +101,7 @@
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin: 10px 0;
+  width: 100%;
 }
 
 .dropdown-links li a {
@@ -116,6 +117,22 @@
 }
 
 .dropdown-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--primary-text);
+}
+
+.logout-btn-link {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--primary-text);
+  font-size: 0.95rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.logout-btn-link:hover {
   background-color: rgba(255, 255, 255, 0.05);
   color: var(--primary-text);
 }
