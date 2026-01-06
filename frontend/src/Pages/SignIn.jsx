@@ -1,12 +1,5 @@
 import React, { useContext, useState } from "react";
-import {
-  FaUser,
-  FaLock,
-  FaGithub,
-  FaGoogle,
-  FaEye,
-  FaEyeSlash,
-} from "react-icons/fa";
+import { FaUser, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 
@@ -104,22 +97,9 @@ function SignIn() {
           </button>
         </form>
 
-        <div className="options">
-          <hr />
-          <p>Or continue with</p>
-          <hr />
-        </div>
+        {/* --- REMOVED SOCIAL BUTTONS SECTION --- */}
 
-        <div className="buttons">
-          <button type="button" aria-label="Sign in with Google">
-            <FaGoogle aria-hidden="true" /> Google
-          </button>
-          <button type="button" aria-label="Sign in with Github">
-            <FaGithub aria-hidden="true" /> Github
-          </button>
-        </div>
-
-        <hr />
+        <hr style={{ marginTop: "20px" }} />
         <p>
           Don't have an Account?{" "}
           <Link to="/signup" className="signup-link">

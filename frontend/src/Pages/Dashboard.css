@@ -3,6 +3,62 @@
   animation: fadeIn 0.5s ease-in-out;
 }
 
+/* PULSING SYNC BUTTON */
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+  }
+}
+
+.btn-sync-hero {
+  background: var(--secondary-color);
+  color: #0d1117;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 15px 40px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  transition: transform 0.2s;
+  animation: pulse-green 2s infinite;
+}
+
+.btn-sync-hero:hover {
+  transform: scale(1.05);
+  background: #26a65b;
+}
+
+/* EMPTY STATE CONTAINER */
+.empty-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--surfaces);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.empty-state-icon {
+  font-size: 4rem;
+  color: var(--secondary-text);
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
